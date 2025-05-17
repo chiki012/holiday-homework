@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>📘 राजकीय उच्च माध्यमिक विद्यालय, नगासर सुगनी, बीकानेर 🇮🇳</h1>
-    <h2>📅 समर अवकाश गृहकार्य और नैतिक शिक्षा</h2>
+    <h2>📅 ग्रीष्म अवकाश गृहकार्य और नैतिक शिक्षा</h2>
   </header>
 
   <main>
@@ -110,11 +110,34 @@
         आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
       </video>
     </section>
+
+    <section class="career-section">
+      <h2 class="career-heading">Explore Your Career Path</h2>
+
+      <div class="field-box" onclick="toggleDetails('science')">
+          विज्ञान क्षेत्र 
+      </div>
+      <div class="details" id="science">
+        <a href="career/math.html" class="sub-field">गणित</a>
+        <a href="career/biology.html" class="sub-field">जीवविज्ञान</a>
+      </div>
+  
+      <a href="career/arts.html" class="field-box">कला क्षेत्र</a>
+      <a href="career/commerce.html" class="field-box">वाणिज्य क्षेत्र</a>
+  
+    </section>
+
+    <!-- Google Form Section -->
+    <section id="ask-question-form">
+      <h2>अपना प्रश्न पूछें</h2>
+      <div class="form-wrapper">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd5pVinJbUd0HPoj7Ce0DgcwcTuEYevqv7Ly5Bf7y07qXLOMg/viewform?embedded=true" width="640" height="890" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      </div>
+    </section>
   </main>
 
   <!-- PDF Modal Viewer -->
-  <!-- PDF Modal Viewer -->
-<div id="pdf-modal" class="pdf-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+  <div id="pdf-modal" class="pdf-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
     <div class="pdf-modal-content" style="position:relative; width:80%; height:80%; background:#fff; padding:10px;">
       <span class="pdf-close" style="position:absolute; top:10px; right:15px; font-size:30px; cursor:pointer;">&times;</span>
       <iframe id="pdf-frame" src="" frameborder="0" style="width:100%; height:90%;"></iframe>

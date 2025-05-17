@@ -24,36 +24,48 @@ document.querySelectorAll('.class-header').forEach(header => {
     });
   });
   
-  document.addEventListener('DOMContentLoaded', () => {
-    const modal = document.getElementById('pdf-modal');
-    const iframe = document.getElementById('pdf-frame');
-    const closeBtn = document.querySelector('.pdf-close');
-    const downloadBtn = document.getElementById('download-btn');
-  
-    document.querySelectorAll('.open-pdf').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault(); // लिंक के डिफॉल्ट behavior को रोको
-        
-        const pdfPath = link.getAttribute('data-pdf');
-        if (pdfPath) {
-          iframe.src = pdfPath;
-          downloadBtn.href = pdfPath;
-          modal.style.display = 'flex'; // modal दिखाओ (flex क्योंकि हमने CSS में flexbox का इस्तेमाल किया)
-        }
-      });
-    });
-  
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-      iframe.src = ''; // iframe साफ करो ताकि PDF बंद हो जाए
-    });
-  
-    // अगर modal के बाहर क्लिक हो तो भी बंद करो
-    window.addEventListener('click', e => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        iframe.src = '';
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('pdf-modal');
+  const iframe = document.getElementById('pdf-frame');
+  const closeBtn = document.querySelector('.pdf-close');
+  const downloadBtn = document.getElementById('download-btn');
+
+  document.querySelectorAll('.open-pdf').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault(); // लिंक के डिफॉल्ट behavior को रोको
+      
+      const pdfPath = link.getAttribute('data-pdf');
+      if (pdfPath) {
+        iframe.src = pdfPath;
+        downloadBtn.href = pdfPath;
+        modal.style.display = 'flex'; // modal दिखाओ (flex क्योंकि हमने CSS में flexbox का इस्तेमाल किया)
       }
     });
   });
-  
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    iframe.src = ''; // iframe साफ करो ताकि PDF बंद हो जाए
+  });
+
+  // अगर modal के बाहर क्लिक हो तो भी बंद करो
+  window.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      iframe.src = '';
+    }
+  });
+});
+
+let activeField = null;
+function toggleDetails(field) {
+    if (activeField) {
+        document.getElementById(activeField).style.display = "none";
+    }
+    if (activeField !== field) {
+        document.getElementById(field).style.display = "block";
+        activeField = field;
+    } else {
+        activeField = null;
+    }
+}

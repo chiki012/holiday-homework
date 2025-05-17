@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Careers</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- Back Button to Go Home with Left Arrow -->
+    <a href="/index.html" class="back-btn">←</a>
+
+    <!-- Top Image Section -->
+    <img src="./video_bio.gif" alt="Biology Careers" class="top-image">
+
+    <h2 class="career-heading">जीवविज्ञान में करियर के अवसर</h2>
+
+    <div class="career-box" onclick="toggleDetails('medical')">
+        <h3>Medical Field</h3>
+        <div class="details" id="medical">
+            <p><strong>MBBS:</strong> Become a doctor by pursuing MBBS after completing a biology-focused science stream.</p>
+            <p><strong>BDS:</strong> Specialize in oral health and dental surgery with BDS.</p>
+            <p><strong>Nursing:</strong> A rewarding healthcare career, from registered nurses to nurse practitioners.</p>
+            <p><strong>Pharmacy:</strong> BPharm leads to roles in drug development, sales, and pharmacy management.</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('biotech')">
+        <h3>Biotechnology and Research</h3>
+        <div class="details" id="biotech">
+            <p><strong>Biotechnology:</strong> Work in pharmaceuticals, biofuels, and genetic engineering.</p>
+            <p><strong>Genetics:</strong> Study genes in medicine, agriculture, and forensic science.</p>
+            <p><strong>Biomedical Research:</strong> Focus on diseases, treatments, and healthcare innovations.</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('environmental')">
+        <h3>Environmental Sciences</h3>
+        <div class="details" id="environmental">
+            <p><strong>Environmental Science:</strong> Work in conservation, climate change, and pollution control.</p>
+            <p><strong>Marine Biology:</strong> Study ocean ecosystems and marine life.</p>
+            <p><strong>Agriculture:</strong> Improve food production and sustainability.</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('forensic')">
+        <h3>Forensic Science</h3>
+        <div class="details" id="forensic">
+            <p><strong>Forensic Science:</strong> Apply biology and chemistry to solve criminal cases.</p>
+        </div>
+    </div>
+
+    <div class="career-box" onclick="toggleDetails('zoology')">
+        <h3>Zoology and Veterinary Sciences</h3>
+        <div class="details" id="zoology">
+            <p><strong>Zoology:</strong> Study animal behavior, genetics, and conservation.</p>
+            <p><strong>Veterinary Sciences:</strong> Diagnose and treat animal diseases.</p>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
