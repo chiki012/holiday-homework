@@ -25,13 +25,17 @@
           <a href="#" class="open-pdf" data-pdf="assets/pdfs/class-1-2/class-1-2-hindi.pdf">📄 देखें</a><br />
         </div>
         <div class="subject">
-          <h4>📘 English</h4>
+          <h4>📘 अंग्रेज़ी</h4>
           <a href="#" class="open-pdf" data-pdf="assets/pdfs/class-1-2/class-1-2-english.pdf">📄 देखें</a><br />
         </div>
         <div class="subject">
           <h4>📐 गणित</h4>
           <a href="#" class="open-pdf" data-pdf="assets/pdfs/class-1-2/class-1-2-math.pdf">📄 देखें</a><br />
         </div>
+        <div class="subject">
+          <h4>📝 मूल्यांकन</h4>
+          <a href="#" id="open-assessment">📄 देखें</a><br />
+        </div>        
       </div>
     </div>
 
@@ -47,7 +51,7 @@
           <a href="#" class="open-pdf" data-pdf="assets/pdfs/class-3-5/class5.pdf">📄 देखें</a><br />
         </div>
         <div class="subject">
-          <h4>📘 English</h4>
+          <h4>📘 अंग्रेज़ी</h4>
           <a href="#" class="open-pdf" data-pdf="assets/pdfs/class-3-5/class-3-5-english.pdf">📄 देखें</a><br />
         </div>
         <div class="subject">
@@ -69,7 +73,7 @@
           <a href="#" class="open-pdf" data-pdf="assets/pdfs/class-6-8/class-6-8-hind2.pdf">📄 देखें</a><br />
         </div>
         <div class="subject">
-          <h4>📘 English</h4>
+          <h4>📘 अंग्रेज़ी</h4>
           <a href="#" class="open-pdf" data-pdf="assets/pdfs/class-6-8/class-6-8-english1.pdf">📄 देखें</a><br />
         </div>
         <div class="subject">
@@ -149,14 +153,54 @@
   </main>
 
   <!-- PDF Modal Viewer -->
-  <div id="pdf-modal" class="pdf-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
-    <div class="pdf-modal-content" style="position:relative; width:80%; height:80%; background:#fff; padding:10px;">
-      <span class="pdf-close" style="position:absolute; top:10px; right:15px; font-size:30px; cursor:pointer;">&times;</span>
-      <iframe id="pdf-frame" src="" frameborder="0" style="width:100%; height:90%;"></iframe>
-      <a id="download-btn" href="" download target="_blank" style="display:inline-block; margin-top:10px;">⬇️ Download PDF</a>
+  <div id="pdf-modal" class="pdf-modal">
+    <div class="pdf-modal-content">
+      <span class="pdf-close">&times;</span>
+      <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+      <a id="download-btn" href="" download target="_blank">⬇️ Download PDF</a>
     </div>
   </div>
-  
+
+  <!-- Assessment Modal -->
+  <div id="assessment-modal" class="assessment-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:10000; justify-content:center; align-items:center;">
+    <div class="assessment-modal-content" style="background:#fff; width:70%; max-width:600px; max-height:80%; padding:20px; overflow-y:auto; border-radius:8px; position:relative;">
+      <span id="assessment-close" style="position:absolute; top:10px; right:15px; font-size:30px; cursor:pointer;">&times;</span>
+      <div style="white-space: pre-line; font-size:16px; line-height:1.5; color:#333;">
+        ✍️ हिंदी टेस्ट
+        प्रश्न 1: अ से ऊ तक वर्णमाला लिखिए।
+        प्रश्न 2: निम्नलिखित शब्दों के पहले अक्षर को पहचानिए:
+          • आम  • इमली • ऊँट
+        प्रश्न 3: सही शब्द से खाली स्थान भरिए:
+          • चा__ (टा / पा / सा)
+          • गु__ (ल / त / म)
+        प्रश्न 4: नीचे दिए गए शब्दों को पढ़कर चित्र बनाइए (अगर संभव हो)।
+          • सूरज • घर • फूल
+        प्रश्न 5: दो फल और दो जानवरों के नाम लिखिए।
+
+        📘 English Test
+        Question 1: Write A to K in capital letters.
+        Question 2: Match the following letters with their objects:
+          A — Apple
+          B — ___
+          C — ___
+        Question 3: Fill in the missing letters:
+          • _ B C • E _ G
+        Question 4: Circle the vowels from the letters below:
+          A, R, E, T, I, M
+        Question 5: Write names of two colors and two animals.
+
+        ➕ Math Test
+        प्रश्न 1: 1 से 20 तक गिनती अंकों और शब्दों में लिखिए।
+        प्रश्न 2: 5 में 3 जोड़िए। उत्तर लिखिए।
+        प्रश्न 3: नीचे दिए गए अंकों को शब्दों में बदलिए:
+          • 9 • 14 • 20
+        प्रश्न 4: इन शब्दों को अंकों में लिखिए:
+          • तेरह • उन्नीस
+        प्रश्न 5: 10 से 1 तक उल्टी गिनती लिखिए।
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
